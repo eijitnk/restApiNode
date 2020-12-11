@@ -5,7 +5,7 @@ const conexao = mysql.createConnection({
     user: 'ba3996c583d29c',
     database: 'heroku_6d8b1ede2e7f849',
     password: 'e737274a',
-    multipleStatements: true
+    // multipleStatements: true
 })
 
 module.exports = conexao
