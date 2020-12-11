@@ -1,0 +1,32 @@
+{
+  "name": "restnode",
+  "version": "1.0.0",
+  "description": "Treinamento Alura Rest Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Willian Eiji Tanaka",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "parser": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eijitnk/restApiNode.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/eijitnk/restApiNode/issues"
+  },
+  "homepage": "https://github.com/eijitnk/restApiNode#readme"
+}
