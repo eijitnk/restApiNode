@@ -33,7 +33,7 @@ class Atendimento {
                 if(erro) {
                     res.status(400).json(erro)
                 } else {
-                    res.status(201).json(atendimento)
+                    res.status(201).json.parse(atendimento)
                 }
             })
         }
@@ -45,7 +45,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                res.status(200).json(resultados)
+                res.status(200).json.parse(resultados)
             }   
         })
     }
@@ -58,7 +58,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                res.status(200).json(atendimento)
+                res.status(200).json.parse(atendimento)
             }
         })
     }
@@ -73,7 +73,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                res.status(200).json({...valores, id})
+                res.status(200).json.parse({...valores, id})
             }
         })
     }
@@ -85,7 +85,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                res.status(200).json({id})
+                res.status(200).json.parse({id})
             }
         })
     }
