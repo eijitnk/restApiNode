@@ -34,7 +34,6 @@ class Atendimento {
                     res.status(400).json(erro)
                 } else {
                     res.status(201).json(atendimento)
-                    conexao.release();
                 }
             })
         }
@@ -47,8 +46,7 @@ class Atendimento {
                 res.status(400).json(erro)
             } else {
                 res.status(200).json(resultados)
-                conexao.release();
-            }   
+            }
         })
     }
 
@@ -61,7 +59,6 @@ class Atendimento {
                 res.status(400).json(erro)
             } else {
                 res.status(200).json(atendimento)
-                conexao.release();
             }
         })
     }
@@ -77,7 +74,6 @@ class Atendimento {
                 res.status(400).json(erro)
             } else {
                 res.status(200).json({...valores, id})
-                conexao.release();
             }
         })
     }
@@ -90,7 +86,6 @@ class Atendimento {
                 res.status(400).json(erro)
             } else {
                 res.status(200).json({id})
-                conexao.release();
             }
         })
     }
