@@ -1,11 +1,12 @@
 const mysql = require('mysql')
+const dbConfig = require('./db.config')
 
-const conexao = mysql.createConnection({
-    host: 'us-cdbr-east-02.cleardb.com',
-    user: 'ba3996c583d29c',
-    database: 'heroku_6d8b1ede2e7f849',
-    password: 'e737274a',
-    // multipleStatements: true
+const conexao = mysql.createPool({
+    host: dbConfig.HOST,
+    user: dbConfig.USER,
+    password: dbConfig.PASSWORD,
+    database: dbConfig.DATABASE,
+    multipleStatements: true
 })
 
 module.exports = conexao

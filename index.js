@@ -4,7 +4,7 @@ const Tabelas = require('./infraestrutura/tabelas')
 
 const port = process.env.PORT || 3000;
 
-conexao.connect(erro => {
+conexao.getConnection(erro => {
     if(erro) {
         console.log(erro)
     } else {
