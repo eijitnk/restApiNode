@@ -19,8 +19,7 @@ class Pet {
             res.status(200).json(novoPet)
           }
         })
-      }     
-
+      }
     })
   }
 }
