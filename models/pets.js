@@ -14,7 +14,6 @@ class Pet {
           res.status(400).json(erro)
         } else {
           res.status(200).json(novoPet)
-          conexao.release();
         }
       })
 
