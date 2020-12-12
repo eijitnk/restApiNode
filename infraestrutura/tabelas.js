@@ -18,7 +18,7 @@ class Tabelas {
             status varchar(20) NOT null, 
             observacoes text, 
             PRIMARY KEY(id)
-        )`
+        ) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8`
 
         this.conexao.query(sql, erro => {
             if(erro) {
@@ -36,7 +36,7 @@ class Tabelas {
             nome varchar(50), 
             imagem varchar(200), 
             PRIMARY KEY(id)
-        )`
+        ) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8`
 
         this.conexao.query(query, erro => {
             if(erro) {
