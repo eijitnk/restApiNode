@@ -6,7 +6,8 @@ const conexao = mysql.createPool({
     user: dbConfig.USER,
     password: dbConfig.PASSWORD,
     database: dbConfig.DATABASE,
-    multipleStatements: true
+    multipleStatements: true,
+    connectionLimit: 10
 })
 
 module.exports = conexao
