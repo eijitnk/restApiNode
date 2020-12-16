@@ -1,7 +1,6 @@
 const customExpress = require('./config/customExpress')
 const conexao = require('./infraestrutura/database/conexao')
 const Tabelas = require('./infraestrutura/database/tabelas')
-const faker = require('faker')
 
 const port = process.env.PORT || 3000;
 

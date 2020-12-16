@@ -1,4 +1,5 @@
 const Atendimento = require('../models/atendimentos')
+const faker = require('../node_modules/faker')
 
 module.exports = app => {
     app.get('/', (req, res) => {
