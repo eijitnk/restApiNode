@@ -5,12 +5,12 @@ const repositorio = require('../repositorios/atendimentos');
 
 class Atendimento {
     constructor() {
-        this.dataEhValida = ({data, dataCriacao}) => moment(data).isSameOrAfter(dataCriacao)
+        this.dataEhValida = ({data, dataCriacao }) => moment(data).isSameOrAfter(dataCriacao)
         this.clienteEhValido = (tamanho) => tamanho >= 5
 
         this.valida = parametros => this.validacoes.filter(campo => {
             const { nome } = campo
-            const parametro = parametro[nome]
+            const parametro = parametros[nome]
 
             return !campo.valido(parametro)
         })
@@ -70,7 +70,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                const { data } = await axios.get(`http://localhost:8082/${cpf}`)
+                const { data } = await axios.get(`http://localhost:3000/${cpf}`)
                 atendimento.cliente = data
                 res.status(200).json(atendimento)
             }
