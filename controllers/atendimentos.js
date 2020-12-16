@@ -1,19 +1,8 @@
 const Atendimento = require('../models/atendimentos')
-const faker = require('../node_modules/faker')
 
 module.exports = app => {
     app.get('/', (req, res) => {
         res.send('Teste')
-    })
-    
-    app.get('/faker/:cpf', (req, res) => {
-        const { cpf } = req.params
-      
-        res.status(200).json({
-          cpf,
-          nome: faker.name.findName(),
-          dataDeNascimento: faker.date.past()
-        })
     })
 
     app.get('/atendimentos', (req, res) => { 
