@@ -70,7 +70,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                const { data } = await axios.get(`https://restapitnknode.herokuapp.com/${cpf}`)
+                const { data } = await axios.get(`https://restapitnknode.herokuapp.com/atendimentos/${cpf}`)
                 atendimento.cliente = data
                 res.status(200).json(atendimento)
             }

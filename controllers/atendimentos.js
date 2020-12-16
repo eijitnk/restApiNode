@@ -6,7 +6,7 @@ module.exports = app => {
         res.send('Teste')
     })
     
-    app.get('/:cpf', (req, res) => {
+    app.get('/atendimentos/:cpf', (req, res) => {
         const { cpf } = req.params
       
         res.status(200).json({
