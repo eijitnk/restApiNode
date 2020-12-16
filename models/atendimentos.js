@@ -64,15 +64,13 @@ class Atendimento {
     buscaPorId(id, res) {
         const sql = `SELECT * FROM Atendimentos WHERE id = ${id}`
 
-        const port = process.env.PORT || 3000;
-
         conexao.query(sql, async (erro, resultados) => {
             const atendimento = resultados[0];
             const cpf = atendimento.cliente;
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                const { data } = await axios.get(`https://restapitnknode.herokuapp.com:${port}/${cpf}`)
+                const { data } = await axios.get(`https://restapitnknode.herokuapp.com/${cpf}`)
                 atendimento.cliente = data
                 res.status(200).json(atendimento)
             }
